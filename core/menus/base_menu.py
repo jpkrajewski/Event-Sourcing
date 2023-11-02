@@ -1,12 +1,10 @@
-from abc import ABC, abstractmethod
 from typing import Dict, Tuple, Callable
+import zope.interface
 
 
-class Menu(ABC):
-    @abstractmethod
-    def __init__(self, mapped_functions: Dict[int, Tuple[Callable, str]]) -> None:
+class IMenu(zope.interface.Interface):
+    def __init__(mapped_functions: Dict[int, Tuple[Callable, str]]) -> None:
         ...
 
-    @abstractmethod
-    def show(self):
+    def show():
         ...

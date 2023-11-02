@@ -1,9 +1,11 @@
 from typing import Callable, Dict, Tuple
-from core.menus.base_menu import Menu
+from core.menus.base_menu import IMenu
 from inspect import getfullargspec
+from zope.interface import implementer
 
 
-class SimpleMenu(Menu):
+@implementer(IMenu)
+class SimpleMenu:
     def __init__(self, mapped_functions: Dict[int, Tuple[Callable, str]]):
         self._mapped = mapped_functions
         self._render_menu()

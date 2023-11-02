@@ -1,22 +1,14 @@
-from abc import ABC, abstractmethod
 from core.transactions.dataclasses import Transaction
-from core.accounts.account import Account
+from core.accounts.account import IAccount
+import zope.interface
 
 
-class Transfer(ABC):
-    @staticmethod
-    @abstractmethod
-    def deposit(account: Account, title: str, amount: int) -> Transaction:
+class ITransfer(zope.interface.Interface):
+    def deposit(account: IAccount, title: str, amount: int) -> Transaction:
         ...
 
-    @staticmethod
-    @abstractmethod
-    def withdraw(account: Account, title: str, amount: int) -> Transaction:
+    def withdraw(account: IAccount, title: str, amount: int) -> Transaction:
         ...
 
-    @staticmethod
-    @abstractmethod
-    def transfer(
-        from_account: Account, to_account: Account, title: str, amount: int
-    ) -> Transaction:
+    def transfer(from_account: IAccount, to_account: IAccount, title: str, amount: int) -> Transaction:
         ...

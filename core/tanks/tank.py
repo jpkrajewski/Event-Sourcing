@@ -1,8 +1,10 @@
-from core.accounts.account import Account
+from core.accounts.account import IAccount
 from uuid import UUID, uuid5
+from zope.interface import implementer
 
 
-class Tank(Account):
+@implementer(IAccount)
+class Tank:
     def __init__(self, name: str, max_volume: int):
         self._uuid = uuid5(namespace=UUID(int=0), name=name)
         self._name = name

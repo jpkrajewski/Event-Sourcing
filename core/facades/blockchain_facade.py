@@ -1,5 +1,5 @@
 from core.blockchains.blockchain import BlockChain
-from core.accounts.account import Account
+from core.accounts.account import IAccount
 from core.transactions.enums import OperationType
 from uuid import UUID
 
@@ -36,13 +36,16 @@ class BlockChainFacade:
             return
         while block is not None:
             print(
-                f"TIMESTAMP: {block.transaction.timestamp} - TITLE: {block.transaction.title} | AMOUNT: {block.transaction.amount} | OPERATION: {block.transaction.operation}"
+                f"TIMESTAMP: {block.transaction.timestamp}"
+                f" - TITLE: {block.transaction.title} | "
+                f"AMOUNT: {block.transaction.amount} | "
+                f"OPERATION: {block.transaction.operation}"
             )
             block = block.prev
 
     def check_state(self, uuid: UUID):
         """(Blockchain) - Check if the state of a given account is correct."""
-        account: Account = self._accounts[uuid]
+        account: IAccount = self._accounts[uuid]
         block: BlockChain = self._blockchain.blocks[uuid]
         amount = 0
         if not block:
@@ -56,10 +59,6 @@ class BlockChainFacade:
                 amount -= block.transaction.amount
             block = block.prev
         if amount == account.amount:
-            print(
-                f"State is correct: Account amount: {account.amount} | BlockChain amount: {amount}"
-            )
+            print(f"State is correct: Account amount: {account.amount} | BlockChain amount: {amount}")
         else:
-            print(
-                f"State is incorrect: Account amount: {account.amount} | BlockChain amount: {amount}"
-            )
+            print(f"State is incorrect: Account amount: {account.amount} | BlockChain amount: {amount}")

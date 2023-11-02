@@ -1,28 +1,22 @@
-from abc import ABC, abstractmethod
 from uuid import UUID
+import zope.interface
 
 
-class Account(ABC):
-    @abstractmethod
-    def get_uuid(self) -> UUID:
+class IAccount(zope.interface.Interface):
+    def get_uuid() -> UUID:
         ...
 
-    @abstractmethod
-    def get_name(self) -> str:
+    def get_name() -> str:
         ...
 
-    @abstractmethod
-    def get_amount(self) -> int:
+    def get_amount() -> int:
         ...
 
-    @abstractmethod
-    def transfer(self, account: "Account", amount: int):
+    def transfer(account: "IAccount", amount: int):
         ...
 
-    @abstractmethod
-    def withdraw(self, amount: int):
+    def withdraw(amount: int):
         ...
 
-    @abstractmethod
-    def deposit(self, amount: int):
+    def deposit(amount: int):
         ...
