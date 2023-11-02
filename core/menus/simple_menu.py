@@ -1,5 +1,5 @@
 from typing import Callable, Dict, Tuple
-from menus.base_menu import Menu
+from core.menus.base_menu import Menu
 from inspect import getfullargspec
 
 

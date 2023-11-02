@@ -1,4 +1,4 @@
-from accounts.account import Account
+from core.accounts.account import Account
 from uuid import UUID, uuid5
 
 

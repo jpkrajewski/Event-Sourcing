@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from transactions.dataclasses import Transaction
-from accounts.account import Account
+from core.transactions.dataclasses import Transaction
+from core.accounts.account import Account
 
 
 class Transfer(ABC):

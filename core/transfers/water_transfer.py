@@ -1,8 +1,8 @@
-from transfers.base_transfer import Transfer
-from transactions.dataclasses import Transaction
-from transactions.schemas import TRANSACTION_SCHEMA
-from transactions.enums import OperationType
-from tanks.tank import Tank
+from core.transfers.base_transfer import Transfer
+from core.transactions.dataclasses import Transaction
+from core.transactions.schemas import TRANSACTION_SCHEMA
+from core.transactions.enums import OperationType
+from core.tanks.tank import Tank
 
 
 class WaterTransfer(Transfer):

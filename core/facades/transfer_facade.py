@@ -1,6 +1,6 @@
 from uuid import UUID
-from blockchains.dataclasses import Block
-from transactions.dataclasses import Transaction
+from core.blockchains.dataclasses import Block
+from core.transactions.dataclasses import Transaction
 
 
 class TransferFacade:

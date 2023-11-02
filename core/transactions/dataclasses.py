@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from transactions.enums import OperationType
+from core.transactions.enums import OperationType
 from uuid import UUID
 from datetime import datetime
 

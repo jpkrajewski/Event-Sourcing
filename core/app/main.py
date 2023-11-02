@@ -1,8 +1,8 @@
-from tanks.tank import Tank
-from blockchains.blockchain import BlockChain
-from transfers.water_transfer import WaterTransfer
-from facades.facade import Facade
-from menus.simple_menu import SimpleMenu
+from core.tanks.tank import Tank
+from core.blockchains.blockchain import BlockChain
+from core.transfers.water_transfer import WaterTransfer
+from core.facades.facade import Facade
+from core.menus.simple_menu import SimpleMenu
 
 if __name__ == "__main__":
     # Instantiate the dependencies

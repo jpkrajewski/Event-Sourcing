@@ -1,12 +1,3 @@
-from typing import Dict
-from uuid import UUID
-from accounts.account import Account
-
-# Znaleźć zbiornik, w którym jest najwięcej wody
-# Znaleźć zbiornik, który jest najbardziej zapełniony
-# Znaleźć wszystkie puste zbiorniki
-
-
 class TankFacade:
     required_attributes = ("_accounts",)
 

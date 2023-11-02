@@ -1,8 +1,7 @@
-from blockchains.blockchain import BlockChain
-from accounts.account import Account
-from transactions.enums import OperationType
+from core.blockchains.blockchain import BlockChain
+from core.accounts.account import Account
+from core.transactions.enums import OperationType
 from uuid import UUID
-from typing import Dict
 
 
 class BlockChainFacade:

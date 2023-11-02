@@ -1,6 +1,6 @@
 from uuid import UUID
 from typing import Dict
-from blockchains.dataclasses import Block
+from core.blockchains.dataclasses import Block
 
 
 class BlockChain:
