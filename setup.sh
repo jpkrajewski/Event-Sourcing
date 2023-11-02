@@ -1,3 +1,3 @@
 # add python path to PYTHONPATH environment variable for the current shell session
-export PYTHONPATH=$PYTHONPATH:$(pwd)
+export PYTHONPATH=$(pwd)
 echo "PYTHONPATH=$PYTHONPATH"
