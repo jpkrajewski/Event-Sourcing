@@ -7,6 +7,7 @@ name = "pypi"
 pre-commit = "*"
 "zope.interface" = "*"
 isort = "*"
+pytest = "*"
 
 [dev-packages]
 
