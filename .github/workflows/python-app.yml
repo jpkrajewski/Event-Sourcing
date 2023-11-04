@@ -31,6 +31,6 @@ jobs:
     - name: Run tests
       run: |
         pipenv shell
-        sh setup.sh
+        export PYTHONPATH=/home/runner/work/Event-Sourcing/Event-Sourcing
         python -m pytest
         exit
